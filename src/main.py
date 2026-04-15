@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from web.elder import router as elder_router
-from model.elder import Base
-from database.database_init import engine
+from database.database_init import engine, Base
+from model.elder import Elder
+from model.users import Groups, All_Users
 
 
 
