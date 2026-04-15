@@ -29,6 +29,8 @@ def get_by_id(id: int, db: Session):
 
 def update_elder(id: int, elder: dict, db: Session):
     new_elder=db.query(Elder_table).filter(id==Elder_table.elder_id).first()
+    if not new_elder:
+        return "elder not found"
     new_elder.name=elder.get("name")
     new_elder.group = elder.get("group")
     new_elder.date_of_birth = elder.get("date_of_birth")

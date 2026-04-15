@@ -3,6 +3,7 @@ from web.elder import router as elder_router
 from database.database_init import engine, Base
 from model.elder import Elder
 from model.users import Groups, All_Users
+from web.publisher_web import router as publisher_router
 
 
 
@@ -10,6 +11,7 @@ from model.users import Groups, All_Users
 app=FastAPI()
 
 app.include_router(elder_router)
+app.include_router(publisher_router)
 
 @app.on_event("startup")
 def startup():

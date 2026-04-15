@@ -8,7 +8,7 @@ class UserCreate(BaseModel):
     group: int
     is_baptized: bool
     date_of_baptism: date
-    Gender: str
+    gender: str
     role: Roles
 
 

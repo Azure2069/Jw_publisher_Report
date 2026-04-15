@@ -9,6 +9,7 @@ from database.database_init import Base
 class All_Users(Base):
     __tablename__="publishers"
     id=Column(Integer, primary_key=True, index=True, autoincrement=True)
+    name=Column(String)
     group=Column(Integer)
     is_baptized=Column(Boolean)
     date_of_baptism=Column(Date)

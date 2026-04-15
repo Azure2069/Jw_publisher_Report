@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb73d00-ed61-4442-85ab-ec40d27ab36f" name="Changes" comment="CRUD for Elder">
-      <change afterPath="$PROJECT_DIR$/src/Roles/roles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repository/elder_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/schema/users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/elder_logic.py" afterDir="false" />
+    <list default="true" id="4cb73d00-ed61-4442-85ab-ec40d27ab36f" name="Changes" comment="Db for users and group">
+      <change afterPath="$PROJECT_DIR$/src/repository/publisher_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/publisher_logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web/publisher_web.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/database_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/elder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/elder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/elder_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/elder_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web/elder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/elder.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,12 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1776173033484</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Db for users and group">
+      <option name="closed" value="true" />
+      <created>1776259836926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776259836926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setup for fastapi done&#10;elder model, schema done." />
     <MESSAGE value="CRUD for Elder" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD for Elder" />
+    <MESSAGE value="Db for users and group" />
+    <option name="LAST_COMMIT_MESSAGE" value="Db for users and group" />
   </component>
 </project>

@@ -42,6 +42,7 @@ def get_by_id(id: int, db: Session=Depends(db_add)):
         return "elder does not exist"
     return elder
 
+#a problem to solve. come back later
 
 @router.put("/update")
 def update_elder(id: int, elder: Elder, db: Session=Depends(db_add)):
@@ -50,4 +51,4 @@ def update_elder(id: int, elder: Elder, db: Session=Depends(db_add)):
     if not elder1:
         return "elder not found"
 
-    return f"{elder1.name}  successfully updated {elder.name}"
+    return f"elder  successfully updated {elder.name}"
