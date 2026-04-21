@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+"""from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from model.elder import Elder
@@ -52,3 +52,4 @@ def update_elder(id: int, elder: Elder, db: Session=Depends(db_add)):
         return "elder not found"
 
     return f"elder  successfully updated {elder.name}"
+"""

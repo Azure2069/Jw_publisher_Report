@@ -1,8 +1,8 @@
-from fastapi import Depends
+"""from fastapi import Depends
 from sqlalchemy.orm import Session
 
 
-from model.users import All_Users as User_table
+from model.users import User as User_table
 
 
 def add_new_publisher(user: dict, db: Session):
@@ -45,3 +45,4 @@ def update(id: int, user: dict, db: Session):
     db.commit()
     db.refresh(publisher)
     return publisher
+"""

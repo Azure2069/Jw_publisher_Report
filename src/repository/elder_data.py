@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+"""from sqlalchemy.orm import Session
 from model.elder import Elder as Elder_table
 
 
@@ -38,3 +38,4 @@ def update_elder(id: int, elder: dict, db: Session):
     db.commit()
     return new_elder
 
+"""

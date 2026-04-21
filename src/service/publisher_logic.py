@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+"""from sqlalchemy.orm import Session
 
 
 from repository import publisher_data
@@ -26,4 +26,4 @@ def update(id, user: dict, db: Session):
     updated_publisher=publisher_data.update(id, user, db)
     if not updated_publisher:
         return "update unsuccessful"
-    return updated_publisher
+    return updated_publisher"""

@@ -1,4 +1,4 @@
-from repository import elder_data
+"""from repository import elder_data
 from sqlalchemy.orm import Session
 
 def add_elder(db: Session, elder: dict):
@@ -21,3 +21,4 @@ def update_elder(id: int, elder: dict, db: Session):
     if not updated_elder:
         return None
     return updated_elder
+"""
