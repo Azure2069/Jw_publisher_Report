@@ -14,9 +14,12 @@ class User(Base):
     is_baptized=Column(Boolean)
     date_of_baptism=Column(Date)
     date_of_birth=Column(Date)
-    gender=Column(String)
+    gender=Column(String) #create enum for male and female
     role= Column(Enum(Roles))
     is_group_overseer=Column(Boolean)
+    username=Column(String, unique=True)
+    hashed_password=Column(String)
+
     group_id=Column(Integer, ForeignKey("groups.id"))
     group=relationship("Group", back_populates="members", foreign_keys=[group_id])
     led_group=relationship("Group", back_populates="overseer", foreign_keys="Group.overseer_id")
@@ -33,6 +36,5 @@ class Group(Base):
     overseer=relationship("User", back_populates="led_group", foreign_keys=[overseer_id])
     members=relationship("User", back_populates="group", foreign_keys="User.group_id")
 
-
-def age():
+def man():
     pass

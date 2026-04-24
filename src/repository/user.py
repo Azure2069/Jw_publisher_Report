@@ -3,8 +3,9 @@ from model.users import User as User_table
 from model.users import Group as Group_table
 from fastapi import HTTPException
 from Roles.roles import Roles
+from repository.auth import hash_password
 
-def create_user(user: dict, db: Session):
+def create_user(user: dict, password: str, db: Session):
 
     group=db.query(Group_table).filter(Group_table.id==user.get("group_id")).first()
     if not group:
@@ -17,6 +18,7 @@ def create_user(user: dict, db: Session):
         raise HTTPException(status_code=404, detail="auxiliary pioneer must be baptized")
     if (user.get("role")!=Roles.elder or user.get("role")!=Roles.pioneer_elder) and user.get("is_group_overseer"):
         raise HTTPException(status_code=403, detail="Only elders qualify to be Group Overseers")
+    user["hashed_password"]=hash_password(password)
     new_user = User_table(**user)
     db.add(new_user)
     db.commit()
@@ -39,11 +41,6 @@ def delete_user_by_id(id: int, db: Session):
     db.delete(user)
 
 def create_group(group: dict, db: Session):
-    #group_leader=db.query(User_table).filter(User_table.group_id==group.get("name"),
-     #                                        User_table.is_group_overseer=="True",
-      #                                       User_table.role==roles.elder).first()
-    #group_leader_id=group_leader.name
-    #group["overseer_id"]=group_leader_id
     new_group=Group_table(**group)
     db.add(new_group)
     db.commit()

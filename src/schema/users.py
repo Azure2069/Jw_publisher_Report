@@ -4,6 +4,7 @@ from Roles.roles import Roles
 from typing import Optional
 
 class UserCreate(BaseModel):
+    username: str
     name: str
     date_of_birth: date
     group_id: int
@@ -11,6 +12,7 @@ class UserCreate(BaseModel):
     date_of_baptism: Optional[date] = None
     gender: str
     role: Roles
+    password: str
     is_group_overseer: bool =False
 
 class UserDb(BaseModel):

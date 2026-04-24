@@ -2,8 +2,8 @@ from sqlalchemy.orm import Session
 from repository import user
 
 
-def add_user(n_user: dict, db: Session):
-    new_user = user.create_user(n_user, db)
+def add_user(n_user: dict, password, db: Session):
+    new_user = user.create_user(n_user, password, db)
     if not new_user:
         return "user creation unsuccessful"
 

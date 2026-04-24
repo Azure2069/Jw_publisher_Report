@@ -6,6 +6,7 @@ class Roles(str, Enum):
     regular_pioneer = "regular pioneer"
     auxiliary_pioneer = "auxiliary pioneer"
     pioneer_elder="pioneer_elder"
+    admin="admin"
 
 
 
