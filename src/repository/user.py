@@ -32,6 +32,8 @@ def get_all_users(db: Session):
     all_users=db.query(User_table).all()
     return all_users
 
+
+
 def get_one_by_id(id: int, db: Session):
     user=db.query(User_table).filter(User_table.id==id)
     return user
@@ -39,6 +41,11 @@ def get_one_by_id(id: int, db: Session):
 def delete_user_by_id(id: int, db: Session):
     user=db.query(User_table).filter(User_table.id==id)
     db.delete(user)
+
+def update_user(id: int, detail)
+#left error here. check how to do proper update function
+
+
 
 def create_group(group: dict, db: Session):
     new_group=Group_table(**group)

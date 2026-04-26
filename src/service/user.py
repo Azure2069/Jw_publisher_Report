@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from repository import user
 
@@ -10,10 +11,10 @@ def add_user(n_user: dict, password, db: Session):
     return new_user
 
 
-def get_by_id(id: int, db: Session):
+def get_one_by_id(id: int, db: Session):
     new_user = user.get_one_by_id(id, db)
     if not new_user:
-        return "user not found"
+        raise HTTPException(status_code=401, detail="user not found")
     return new_user
 
 
