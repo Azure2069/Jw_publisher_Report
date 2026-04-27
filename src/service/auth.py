@@ -32,4 +32,5 @@ def get_admin(current_user=Depends(get_current_user)):
 """
 
 
-
+def change_password(id: int, old_password: str, new_password: str, db: Session):
+    return auth.change_password(id, old_password, new_password, db)

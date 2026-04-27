@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import date
-from Roles.roles import Roles
+from Roles.roles import Roles, Gender
 from typing import Optional
 
 class UserCreate(BaseModel):
@@ -34,6 +34,28 @@ class UserResponse(BaseModel):
     is_baptized: bool
 
 
+class UpdateUserInfo(BaseModel):
+
+    name: Optional[str]=None
+    date_of_birth: date
+
+
+class ChangePassword(BaseModel):
+    old_password: str
+    new_password: str
+
+class UpdateUserAdmin(BaseModel):
+    name: Optional[str] = None
+    date_of_birth: date
+    group_id: int
+    is_baptized: bool
+    date_of_baptism: Optional[date] = None
+    gender: Optional[Gender] = None
+    role: Optional[Roles] = None
+    password: Optional[str] = None
+
+
+
 class publisher_report(BaseModel):
     month: date
     participated: bool
@@ -50,5 +72,4 @@ class regular_pioneer_report(publisher_report):
 
 class Group(BaseModel):
     name: str
-
 

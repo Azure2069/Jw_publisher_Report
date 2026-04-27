@@ -44,3 +44,14 @@ def delete_session(token: str, db: Session):
     db.commit()
 
 
+def change_password(id: int, old_password, new_password, db: Session):
+    user=db.query(User_table).filter(User_table.id==id).first()
+    original_hashed_password=user.hashed_password
+    check_old_password=verify_passpord(old_password, original_hashed_password)
+    if not check_old_password:
+        raise HTTPException(status_code=403, detail="Old Password Wrong")
+    new_hashed_password=hash_password(new_password)
+    user.hashed_password=new_hashed_password
+    db.commit()
+    db.refresh(user)
+    return "Successfully Changed Password"

@@ -7,9 +7,10 @@ def add_user(n_user: dict, password, db: Session):
     new_user = user.create_user(n_user, password, db)
     if not new_user:
         return "user creation unsuccessful"
-
     return new_user
 
+#def add_admin(user_info: dict, db: Session):
+   # return user.add_admin(user_info, db)
 
 def get_one_by_id(id: int, db: Session):
     new_user = user.get_one_by_id(id, db)
@@ -29,6 +30,11 @@ def delete(id: int, db: Session):
     user.delete_user_by_id(id, db)
     return "successfully deleted user"
 
+def update_user(id: int, updates: dict, db: Session):
+    updated_user=user.update_user(id, updates, db)
+    if not updated_user:
+        raise HTTPException(status_code=403, detail="update unsuccessful")
+    return updated_user
 
 def create_new_group(group: dict, db: Session):
     new_group = user.create_group(group, db)

@@ -40,6 +40,13 @@ def get_elder(current_user=Depends(get_current_user)):
         raise HTTPException(status_code=403, detail="Access Denied! User not Elder")
     return current_user #here it is an elder
 
+
+def get_elder_or_admin(current_user=Depends(get_current_user)):
+    if not (current_user.role == Roles.elder or Roles.admin):
+        raise HTTPException(status_code=403, detail="Access Denied! Contact any elder")
+    return current_user
+
+
 def get_group_leader(current_user=Depends(get_elder)):
     if not current_user.is_group_overseer:
         return HTTPException(status_code=403, detail="Access denaid! You are not a group Overseer")

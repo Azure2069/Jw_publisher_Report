@@ -6,8 +6,8 @@ from Roles.roles import Roles
 
 from fastapi import HTTPException
 
-def get_publisher(username: str, db: Session):
-    publisher = db.query(user_table).filter(user_table.username == username).first()
+def get_publisher(id: str, db: Session):
+    publisher = db.query(user_table).filter(user_table.id == id).first()
     if not publisher:
         raise HTTPException(status_code=402, detail="publisher cannot be found")
     return publisher
@@ -53,7 +53,7 @@ def view_all_reports(db:Session):
 """
 
 def view_report_by_group(group_id: int, db: Session):
-    repor=db.query(Report_table).filter(Report_table.group_id==group_id).all()
-    if not repor:
+    reports=db.query(Report_table).join(user_table).filter(user_table.group_id==group_id).all()
+    if not reports:
         raise HTTPException(status_code=404, detail="group report not found")
-    return repor
+    return reports

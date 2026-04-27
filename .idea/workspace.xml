@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb73d00-ed61-4442-85ab-ec40d27ab36f" name="Changes" comment="Added login and logout and verify">
-      <change beforePath="$PROJECT_DIR$/src/database/database_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Roles/roles.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Roles/roles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dependency/dependecy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dependency/dependecy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repository/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web/user.py" afterDir="false" />
     </list>
@@ -135,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777050914832</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added login and logout and verify">
+      <option name="closed" value="true" />
+      <created>1777195740627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777195740627</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

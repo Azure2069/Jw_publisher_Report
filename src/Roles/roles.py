@@ -9,4 +9,10 @@ class Roles(str, Enum):
     admin="admin"
 
 
+class Gender(str, Enum):
+    male="male"
+    female="female"
 
+
+def add():
+    pass
